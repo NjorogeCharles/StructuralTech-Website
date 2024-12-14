@@ -1,0 +1,45 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+    <div class="page-title dark-background" style="background-image: url({% static 'assets/img/page-title-bg.jpg' %});">
+      <div class="container position-relative">
+        <h1>Clients Quotations</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li class="current">Clients Quotations</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+    <h1 class="text-center mb-4">Clients Quotations</h1>
+    <table class="table-info container table table-bordered table-hover table-striped"  style="background-color: #3a3a3a; font-weight: bold;">
+    <thread class="table-dark">
+        <tr>
+        <th style="padding: 12px 15px; border: 1px solid #444;">Name</th>
+        <th style="padding: 12px 15px; border: 1px solid #444;">Email</th>
+        <th style="padding: 12px 15px; border: 1px solid #444;">Phone</th>
+        <th style="padding: 12px 15px; border: 1px solid #444;">message</th>
+        <th style="padding: 12px 15px; border: 1px solid #444;">Action</th>
+        </tr>
+    </thread>
+
+    {% for y in quotes %}
+        <tr>
+            <td style="padding: 12px 15px; border: 1px solid #444;">{{ y.name }}</td>
+            <td style="padding: 12px 15px; border: 1px solid #444;">{{ y.email }}</td>
+            <td style="padding: 12px 15px; border: 1px solid #444;">{{ y.phone }}</td>
+            <td style="padding: 12px 15px; border: 1px solid #444;">{{ y.message }}</td>
+            <td style="padding: 12px 15px; border: 1px solid #444;">
+                <a href="/edit_quote/{{ y.id }}" class="btn btn-warning" style="background-color: #f39c12; color: white; border: none; padding: 6px 12px; border-radius: 25px; font-size: 14px; cursor: pointer; text-decoration: none;">EDIT</a>
+                <a href="/delete_quote/{{ y.id }}" class="btn btn-danger" style="background-color: #e74c3c; color: white; border: none; padding: 6px 12px; border-radius: 25px; font-size: 14px; cursor: pointer; text-decoration: none;">DELETE</a>
+                <a href="{% url 'pay' %}" class="btn btn-success" style="background-color: #28a745; color: white; border: none; padding: 6px 12px; border-radius: 25px; font-size: 14px; cursor: pointer; text-decoration: none;">PAY</a></a>
+            </td>
+        </tr>
+
+    {% endfor %}
+
+    </table>
+
+{% endblock %}

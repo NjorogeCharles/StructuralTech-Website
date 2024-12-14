@@ -1,0 +1,19 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+    <div class="page-title dark-background" style="background-image: url({% static 'assets/img/page-title-bg.jpg' %});">
+      <div class="container position-relative">
+        <h1>Build & Design Portfolio</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li class="current">Build & Design Portfolio</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+    <h1 class="text-center mb-4">Build & Design Portfolio</h1>
+
+
+{% endblock %}

@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>About - StructuralTeh Experts</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+    
+    {% load static %}
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/1favicon.ico' %}" rel="icon" type="image/x-icon">
+  <link href="{% static 'assets/img/1favicon.ico' %}" rel="icon" type="image/png" sizes="32x32">
+  <link href="{% static 'assets/img/1apple-touch-icon.png' %}" rel="apple-touch-icon" sizes="180x180">
+  <link href="{% static 'assets/img/1android-chrome-192x192.png' %}" rel="icon" type="image/png" sizes="192x192">
+  <link href="{% static 'assets/img/1android-chrome-512x512.png' %}" rel="icon" type="image/png" sizes="512x512">
+  <link href="{% static 'assets/img/1favicon-16x16.png' %}" rel="icon" type="image/png" sizes="16x16">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: UpConstruction
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="about-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">StructuralTech Experts</h1> <span>.</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+  <ul>
+
+      <li class="dropdown">
+      <a href="#"><span>Home</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'adminsection' %}">Admin</a></li>
+      </ul>
+    </li>
+      <li class="dropdown">
+      <a href="#"><span>Portfolio</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <ul>
+        <li><a href="{% url 'image' %}">House Units</a></li>
+      </ul>
+    </li>
+    <li><a href="{% url 'about' %}">About</a></li>
+
+    <li class="dropdown">
+      <a href="#"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <ul>
+        <li><a href="{% url 'services' %}">Services</a></li>
+        <li><a href="{% url 'service_details' %}">Services Details</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#"><span>Projects</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <ul>
+        <li><a href="{% url 'project' %}">Projects</a></li>
+        <li><a href="{% url 'project_details' %}">Projects Details</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#"><span>Blog</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <ul>
+        <li><a href="{% url 'blog' %}">Blog</a></li>
+        <li><a href="{% url 'blog_details' %}">Blog Details</a></li>
+      </ul>
+    </li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+  </ul>
+  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+</nav>
+
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" style="background-image: url({% static 'assets/img/page-title-bg.jpg' %});">
+      <div class="container position-relative">
+        <h1>About</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li class="current">About</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row position-relative">
+
+          <div class="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200"><img src="{% static 'assets/img/aboutimage0.jpg' %}"></div>
+
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="inner-title">Engineering Excellence Since 1988</h2>
+            <div class="our-story">
+              <h4>Est 1988</h4>
+              <h3>Our Story</h3>
+              <p>Founded on innovation and driven by excellence, our journey began in 1988. Over the years, we have built a reputation for delivering exceptional construction services tailored to meet diverse client needs. Our commitment to quality and precision has earned us trust and loyalty in the industry.</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <span>Dedicated to sustainable and efficient solutions.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Experts in modern and reliable construction practices.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Trusted partners for delivering on time and within budget.</span></li>
+              </ul>
+              <p>At StructuralTech Experts, we prioritize innovation, attention to detail, and customer satisfaction. Our team of skilled professionals ensures every project reflects our core values of integrity and reliability.</p>
+
+              <div class="watch-video d-flex align-items-center position-relative">
+                <i class="bi bi-play-circle"></i>
+                <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox stretched-link">Watch Video</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Stats Counter Section -->
+    <section id="stats-counter" class="stats-counter section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Achievements</h2>
+        <p>Driven by passion and excellence, our success is reflected in the milestones we’ve achieved and the relationships we’ve built.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Satisfied Partners</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-journal-richtext color-orange flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Completed Projects</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-headset color-green flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Service Hours Provided</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-people color-pink flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Committed Professionals</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Counter Section -->
+
+    <!-- Alt Services Section -->
+    <section id="alt-services" class="alt-services section">
+
+      <div class="container">
+
+        <div class="row justify-content-around gy-4">
+          <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100"><img src="{% static 'assets/img/aboutimage3.jpg' %}" alt=""></div>
+
+          <div class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <h3>Innovative Solutions Tailored for You</h3>
+            <p>We pride ourselves on delivering creative and efficient services that meet your unique needs. Our team is dedicated to excellence, ensuring every solution is both practical and innovative.</p>
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-easel flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Customized Strategies</a></h4>
+                <p>We provide solutions designed to address challenges, ensuring precision and reliability in every project.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-patch-check flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Certified Excellence</a></h4>
+                <p>We ensure superior quality and compliance, delivering results with unmatched reliability and integrity.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-brightness-high flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Bright Ideas</a></h4>
+                <p>Our innovative approaches transform visions into reality, tailored to exceed your expectations.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="600">
+              <i class="bi bi-brightness-high flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Trusted Solutions</a></h4>
+                <p>Experience dependable services crafted with precision, addressing every need effectively and efficiently.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Alt Services Section -->
+
+    <!-- Alt Services 2 Section -->
+    <section id="alt-services-2" class="alt-services-2 section">
+
+      <div class="container">
+
+        <div class="row justify-content-around gy-4">
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+            <h3>Tailored Solutions for Every Challenge</h3>
+            <p>We provide innovative services designed to address diverse needs, ensuring quality and satisfaction at every step.</p>
+
+            <div class="row">
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-easel flex-shrink-0"></i>
+                <div>
+                  <h4>Creative Concepts</h4>
+                  <p>Transforming ideas into actionable strategies that deliver measurable outcomes. </p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-patch-check flex-shrink-0"></i>
+                <div>
+                  <h4>Certified Assurance</h4>
+                  <p>Upholding the highest standards to ensure dependable and trustworthy solutions.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-brightness-high flex-shrink-0"></i>
+                <div>
+                  <h4>Innovative Insights</h4>
+                  <p>Delivering forward-thinking strategies to overcome challenges with precision.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-brightness-high flex-shrink-0"></i>
+                <div>
+                  <h4>Strategic Solutions</h4>
+                  <p>Delivering effective strategies tailored to meet diverse challenges, ensuring optimal results.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+            </div>
+
+          </div>
+
+          <div class="features-image col-lg-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+            <img src="{% static 'assets/img/features-3-2.jpg' %}" alt="">
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Alt Services 2 Section -->
+
+    <!-- Team Section -->
+    <section id="team" class="team section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Team</h2>
+        <p>Driven by innovation and expertise, our team is committed to delivering excellence in every project we undertake.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member-img">
+              <img src="{% static 'assets/img/team/teamimage2.jpeg' %}" class="img-fluid" alt="">
+              <div class="social">
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info text-center">
+              <h4>James Macharia</h4>
+              <span>Chief Executive Officer</span>
+              <p>James leads with a vision of integrity and excellence, fostering a culture of innovation and collaboration.</p>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-img">
+              <img src="{% static 'assets/img/team/teamimage1.jpeg' %}" class="img-fluid" alt="">
+              <div class="social">
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info text-center">
+              <h4>Ruth Ochieng</h4>
+              <span>Product Manager</span>
+              <p>Ruth ensures our products meet the highest standards of quality and functionality, driving successful project outcomes.</p>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
+            <div class="member-img">
+              <img src="{% static 'assets/img/team/team3.jpeg' %}" class="img-fluid" alt="">
+              <div class="social">
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info text-center">
+              <h4>Lucy Njoroge</h4>
+              <span>CTO</span>
+              <p>Clyde drives our technological innovations, ensuring seamless integration of solutions that enhance efficiency and productivity.</p>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
+            <div class="member-img">
+              <img src="{% static 'assets/img/team/teamimage9.jpeg' %}" class="img-fluid" alt="">
+              <div class="social">
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info text-center">
+              <h4>Lucy Njeri</h4>
+              <span>Accountant</span>
+              <p>Lucy skillfully manages our financial records, ensuring accuracy and compliance while providing valuable insights for strategic decisions.</p>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="500">
+            <div class="member-img">
+              <img src="{% static 'assets/img/team/teamimage8.jpeg' %}" class="img-fluid" alt="">
+              <div class="social">
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info text-center">
+              <h4>Austin Mwangi</h4>
+              <span>Marketing</span>
+              <p>Austin excels in crafting impactful marketing strategies, driving brand awareness, and enhancing customer engagement through innovative campaigns.</p>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
+            <div class="member-img">
+              <img src="{% static 'assets/img/team/teamimage5.jpeg' %}" class="img-fluid" alt="">
+              <div class="social">
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info text-center">
+              <h4>Andrew Onyango</h4>
+              <span>Operation</span>
+              <p>Andrew ensures operational efficiency by streamlining processes, enhancing productivity, and effectively managing resources to achieve organizational goals.</p>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Team Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>Our clients' experiences reflect our commitment to quality, showcasing the positive impact of our services and the satisfaction we strive to achieve.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="{% static 'assets/img/testimonials/testimonialimage1.jpg' %}" class="testimonial-img" alt="">
+                  <h3>David Onyango</h3>
+                  <h4>Manager COK</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>Working with this team has truly transformed our project outcomes. Their expertise in project management ensured seamless execution and timely delivery. We appreciate their dedication, professionalism, and ability to adapt to our needs, resulting in exceptional results that exceeded our expectations.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="{% static 'assets/img/testimonials/testimonialimage2.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Samuel Malonza</h3>
+                  <h4>Architect</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>The team's innovative approach and attention to detail have greatly enhanced our architectural projects. Their ability to listen and adapt to our vision has resulted in outstanding designs. I highly recommend their services for anyone seeking exceptional quality and professionalism in construction.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="{% static 'assets/img/testimonials/testimonialimage3.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Joyce Wanjiku</h3>
+                  <h4>hardware Owner</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>The quality of service we received was exceptional. They consistently delivered on their promises and exceeded our expectations. Their dedication to customer satisfaction is evident in every interaction. I highly recommend their expertise to anyone in need of reliable hardware solutions.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="{% static 'assets/img/testimonials/testimonialimage5.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Caro Mutheu</h3>
+                  <h4>Remote Worker</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>The support I received was outstanding, as they addressed every concern promptly. Their team showed exceptional professionalism and knowledge, ensuring all my needs were met. I truly appreciate their dedication and would gladly recommend their services to others seeking quality remote work solutions.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="{% static 'assets/img/testimonials/testimonialimage4.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Martin Akoth</h3>
+                  <h4>Business Owner</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>Their expertise truly made a difference in my business operations. They were attentive to my needs and provided valuable insights that enhanced my strategies. I am grateful for their support and highly recommend their services to anyone looking for effective business solutions.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">StructuralTech Experts</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>087 Karen, The Nexus, 15th Floor</p>
+            <p>Nairobi, Kenya.</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254 757 784 048</span></p>
+            <p><strong>Email:</strong> <span>info@structuraltechexperts.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Construction Management</a></li>
+            <li><a href="#">Structural Engineering</a></li>
+            <li><a href="#">Project Planning and Consultancy</a></li>
+            <li><a href="#">Building Design and Architecture</a></li>
+            <li><a href="#">Quality Assurance and Safety Inspections</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Approach</h4>
+          <ul>
+            <li><a href="#">Personalized Engagement</a></li>
+            <li><a href="#">Innovative Solutions</a></li>
+            <li><a href="#">Strategic Execution</a></li>
+            <li><a href="#">Ongoing Support</a></li>
+            <li><a href="#">Commitment to Quality</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Commitment</h4>
+          <ul>
+            <li><a href="#">Integrity</a></li>
+            <li><a href="#">Responsiveness</a></li>
+            <li><a href="#">Value-driven Results</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Collaboration</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">StructuralTech Experts</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">StructuralTech Experts.</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

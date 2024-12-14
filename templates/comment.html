@@ -1,0 +1,45 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+    <div class="page-title dark-background" style="background-image: url({% static 'assets/img/page-title-bg.jpg' %});">
+      <div class="container position-relative">
+        <h1>Blog Comments</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li class="current">Blog Comments</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+    <h1 class="text-center mb-4">Blog Comments</h1>
+    <table class="table-info container table table-bordered table-hover table-striped table-dark-custom"  style="background-color: #3a3a3a; font-weight: bold;">
+    <thread class="table-dark">
+        <tr>
+        <th style="padding: 12px 15px; border: 1px solid #444;">Name</th>
+        <th style="padding: 12px 15px; border: 1px solid #444;">Email</th>
+        <th style="padding: 12px 15px; border: 1px solid #444;">Website</th>
+        <th style="padding: 12px 15px; border: 1px solid #444;">Comment</th>
+        <th style="padding: 12px 15px; border: 1px solid #444;">Action</th>
+        </tr>
+    </thread>
+
+    {% for z in comments %}
+        <tr>
+            <td style="padding: 12px 15px; border: 1px solid #444;">{{ z.name }}</td>
+            <td style="padding: 12px 15px; border: 1px solid #444;">{{ z.email }}</td>
+            <td style="padding: 12px 15px; border: 1px solid #444;">{{ z.website }}</td>
+            <td style="padding: 12px 15px; border: 1px solid #444;">{{ z.comment }}</td>
+            <td style="padding: 12px 15px; border: 1px solid #444;">
+
+                <a href="/delete_comment/{{ z.id }}" class="btn btn-danger" style="background-color: #e74c3c; color: white; border: none; padding: 6px 12px; border-radius: 25px; font-size: 14px; cursor: pointer; text-decoration: none;">DELETE</a>
+
+            </td>
+        </tr>
+
+    {% endfor %}
+
+    </table>
+
+{% endblock %}

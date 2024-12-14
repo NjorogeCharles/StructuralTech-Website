@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Blog - StructuralTech Experts</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+    {% load static %}
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/1favicon.ico' %}" rel="icon" type="image/x-icon">
+  <link href="{% static 'assets/img/1favicon.ico' %}" rel="icon" type="image/png" sizes="32x32">
+  <link href="{% static 'assets/img/1apple-touch-icon.png' %}" rel="apple-touch-icon" sizes="180x180">
+  <link href="{% static 'assets/img/1android-chrome-192x192.png' %}" rel="icon" type="image/png" sizes="192x192">
+  <link href="{% static 'assets/img/1android-chrome-512x512.png' %}" rel="icon" type="image/png" sizes="512x512">
+  <link href="{% static 'assets/img/1favicon-16x16.png' %}" rel="icon" type="image/png" sizes="16x16">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: UpConstruction
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="blog-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">StructuralTech Experts</h1> <span>.</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+  <ul>
+
+      <li class="dropdown">
+      <a href="#"><span>Home</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'adminsection' %}">Admin</a></li>
+      </ul>
+    </li>
+      <li class="dropdown">
+      <a href="#"><span>Portfolio</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <ul>
+        <li><a href="{% url 'image' %}">House Units</a></li>
+      </ul>
+    </li>
+    <li><a href="{% url 'about' %}">About</a></li>
+
+    <li class="dropdown">
+      <a href="#"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <ul>
+        <li><a href="{% url 'services' %}">Services</a></li>
+        <li><a href="{% url 'service_details' %}">Services Details</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#"><span>Projects</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <ul>
+        <li><a href="{% url 'project' %}">Projects</a></li>
+        <li><a href="{% url 'project_details' %}">Projects Details</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#"><span>Blog</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <ul>
+        <li><a href="{% url 'blog' %}">Blog</a></li>
+        <li><a href="{% url 'blog_details' %}">Blog Details</a></li>
+      </ul>
+    </li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+  </ul>
+  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+</nav>
+
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" style="background-image: url({% static 'assets/img/page-title-bg.jpg' %});">
+      <div class="container position-relative">
+        <h1>Blog</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li class="current">Blog</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Blog Posts Section -->
+    <section id="blog-posts" class="blog-posts section">
+
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <article class="position-relative h-100">
+
+              <div class="post-img position-relative overflow-hidden">
+                <img src="{% static 'assets/img/blog/blogpic01.jpg' %}" class="img-fluid" alt="">
+                <span class="post-date">December 12</span>
+              </div>
+
+              <div class="post-content d-flex flex-column">
+
+                <h3 class="post-title"> Valuable Options for Addressing Complex Challenges in Modern Society</h3>
+
+                <div class="meta d-flex align-items-center">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-person"></i> <span class="ps-2">Trevor Ombija</span>
+                  </div>
+                  <span class="px-3 text-black-50">/</span>
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-folder2"></i> <span class="ps-2">Current Affairs</span>
+                  </div>
+                </div>
+
+                <p>
+                  Diverse perspectives often reveal the intricate consequences of decision-making. Understanding these complexities can lead to informed conclusions. Engaging with these issues is vital for fostering awareness and constructive dialogue.
+                </p>
+
+                <hr>
+
+                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+          <div class="col-lg-4">
+            <article class="position-relative h-100">
+
+              <div class="post-img position-relative overflow-hidden">
+                <img src="{% static 'assets/img/blog/blogpic02.jpg' %}" class="img-fluid" alt="">
+                <span class="post-date">March 19</span>
+              </div>
+
+              <div class="post-content d-flex flex-column">
+
+                <h3 class="post-title">Significant Challenges in Economic Systems and Their Impacts</h3>
+
+                <div class="meta d-flex align-items-center">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-person"></i> <span class="ps-2">Joyce Njuguna</span>
+                  </div>
+                  <span class="px-3 text-black-50">/</span>
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
+                  </div>
+                </div>
+
+                <p>
+                  Contemporary economic issues demand careful examination. Exploring the underlying factors that influence these dynamics is essential for effective policymaking and societal progress. A balanced approach can yield sustainable solutions.
+                </p>
+
+                <hr>
+
+                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+          <div class="col-lg-4">
+            <article class="position-relative h-100">
+
+              <div class="post-img position-relative overflow-hidden">
+                <img src="{% static 'assets/img/blog/blogpic03.jpg' %}" class="img-fluid" alt="">
+                <span class="post-date">June 24</span>
+              </div>
+
+              <div class="post-content d-flex flex-column">
+
+                <h3 class="post-title">Effective Strategies for Managing Stress in Competitive Environments</h3>
+
+                <div class="meta d-flex align-items-center">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-person"></i> <span class="ps-2">NellyChristine Kariuki</span>
+                  </div>
+                  <span class="px-3 text-black-50">/</span>
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
+                  </div>
+                </div>
+
+                <p>
+                  Challenging circumstances often demand effective coping mechanisms. Developing resilience can help individuals navigate intense pressures and enhance overall performance. Understanding these strategies is essential for success in any competitive field.
+                </p>
+
+                <hr>
+
+                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+          <div class="col-lg-4">
+            <article class="position-relative h-100">
+
+              <div class="post-img position-relative overflow-hidden">
+                <img src="{% static 'assets/img/blog/blogpic04.jpg' %}" class="img-fluid" alt="">
+                <span class="post-date">August 05</span>
+              </div>
+
+              <div class="post-content d-flex flex-column">
+
+                <h3 class="post-title">Exploring the Impacts of Athletic Endeavors on Community Engagement</h3>
+
+                <div class="meta d-flex align-items-center">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-person"></i> <span class="ps-2">Sharon Odhiambo</span>
+                  </div>
+                  <span class="px-3 text-black-50">/</span>
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
+                  </div>
+                </div>
+
+                <p>
+                  Athletic activities frequently foster communal connections. Investigating how sports influence social dynamics can illuminate pathways for deeper engagement and collaboration. These interactions are vital for nurturing a vibrant community spirit.
+                </p>
+
+                <hr>
+
+                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+          <div class="col-lg-4">
+            <article class="position-relative h-100">
+
+              <div class="post-img position-relative overflow-hidden">
+                <img src="{% static 'assets/img/blog/blogpic05.jpg' %}" class="img-fluid" alt="">
+                <span class="post-date">September 17</span>
+              </div>
+
+              <div class="post-content d-flex flex-column">
+
+                <h3 class="post-title">Understanding the Dynamics of Political Accountability and Its Impacts</h3>
+
+                <div class="meta d-flex align-items-center">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-person"></i> <span class="ps-2">Caleb Kirika</span>
+                  </div>
+                  <span class="px-3 text-black-50">/</span>
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>
+                  </div>
+                </div>
+
+                <p>
+                  In analyzing political accountability, we uncover essential truths regarding governance and public trust. The mechanisms ensuring transparency are critical in addressing the challenges facing contemporary society. A comprehensive approach can reveal underlying issues and promote effective solutions.
+                </p>
+
+                <hr>
+
+                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+          <div class="col-lg-4">
+            <article class="position-relative h-100">
+
+              <div class="post-img position-relative overflow-hidden">
+                <img src="{% static 'assets/img/blog/blogpic06.jpg' %}" class="img-fluid" alt="">
+                <span class="post-date">December 07</span>
+              </div>
+
+              <div class="post-content d-flex flex-column">
+
+                <h3 class="post-title">Analyzing Economic Disparities and Their Societal Implications</h3>
+
+                <div class="meta d-flex align-items-center">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-person"></i> <span class="ps-2">Dennis Barasa</span>
+                  </div>
+                  <span class="px-3 text-black-50">/</span>
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
+                  </div>
+                </div>
+
+                <p>
+                  Economic disparities often influence social structures and individual opportunities. Investigating these differences allows for a deeper understanding of their impact on communities. By addressing underlying issues, we can formulate strategies for improvement and greater equity.
+                </p>
+
+                <hr>
+
+                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+        </div>
+      </div>
+
+    </section><!-- /Blog Posts Section -->
+
+    <!-- Blog Pagination Section -->
+    <section id="blog-pagination" class="blog-pagination section">
+
+      <div class="container">
+        <div class="d-flex justify-content-center">
+          <ul>
+            <li><a href="#"><i class="bi bi-chevron-left"></i></a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#" class="active">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li>...</li>
+            <li><a href="#">10</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+    </section><!-- /Blog Pagination Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">StructuralTech Experts</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>087 Karen, The Nexus, 15th Floor</p>
+            <p>Nairobi, Kenya.</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254 757 784 048</span></p>
+            <p><strong>Email:</strong> <span>info@structuraltechexperts.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Construction Management</a></li>
+            <li><a href="#">Structural Engineering</a></li>
+            <li><a href="#">Project Planning and Consultancy</a></li>
+            <li><a href="#">Building Design and Architecture</a></li>
+            <li><a href="#">Quality Assurance and Safety Inspections</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Approach</h4>
+          <ul>
+            <li><a href="#">Personalized Engagement</a></li>
+            <li><a href="#">Innovative Solutions</a></li>
+            <li><a href="#">Strategic Execution</a></li>
+            <li><a href="#">Ongoing Support</a></li>
+            <li><a href="#">Commitment to Quality</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Commitment</h4>
+          <ul>
+            <li><a href="#">Integrity</a></li>
+            <li><a href="#">Responsiveness</a></li>
+            <li><a href="#">Value-driven Results</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Collaboration</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">StructuralTech Experts</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">StructuralTech Experts.</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

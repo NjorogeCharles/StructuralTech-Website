@@ -1,0 +1,66 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+
+        <!-- Get Started Section -->
+    <section id="get-started" class="get-started section">
+
+      <div class="container">
+
+        <div class="row justify-content-between gy-4">
+
+          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+            <div class="content">
+              <h3>Comprehensive Construction Solutions for Your Needs.</h3>
+              <p>At StructuralTech Experts, we specialize in providing tailored construction services that meet your unique requirements. Our experienced team ensures every project is managed with precision and care, delivering results that exceed expectations.
+              </p>
+              <p>We pride ourselves on our commitment to quality and client satisfaction. From initial planning to final inspection, we handle every detail to ensure a seamless experience for our clients.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-5" data-aos="zoom-out" data-aos-delay="200">
+            <form method="POST" action="/update_quote/{{ quote.id }}">
+
+                {% csrf_token %}
+                {{ form.as_p }}
+
+              <h3>Update Your Project Quote</h3>
+              <p>Experience unparalleled service as we deliver a precise quote tailored to your project requirements. Our dedicated team is here to assist you every step of the way.</p>
+              <div class="row gy-3">
+
+                <div class="col-12">
+                  <input type="text" name="name" value="{{ quote.name }}" class="form-control" placeholder="Name" required="">
+                </div>
+
+                <div class="col-12 ">
+                  <input type="email" class="form-control" value="{{ quote.email }}" name="email" placeholder="Email" required="">
+                </div>
+
+                <div class="col-12">
+                  <input type="text" class="form-control" value="{{ quote.phone }}" name="phone" placeholder="Phone" required="">
+                </div>
+
+                <div class="col-12">
+                  <textarea class="form-control" name="message" value="{{ quote.message }}" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-12 text-center">
+                  <div class="loading" style="display: none;">Loading...</div>
+                  <div class="error-message" style="display: none;"></div>
+                  <div class="sent-message" style="display: none;">Your quote request has been sent successfully. Thank you!</div>
+
+                  <button type="submit" style="background-color: #f39c12; color: white; border: none; padding: 12px 30px; border-radius: 25px; font-size: 16px; cursor: pointer;">Update Request</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Quote Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Get Started Section -->
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+    <div class="page-title dark-background" style="background-image: url({% static 'assets/img/page-title-bg.jpg' %});">
+      <div class="container position-relative">
+        <h1>Admin Section</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li class="current">Admin Section</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+
+{% endblock %}
